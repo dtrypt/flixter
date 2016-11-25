@@ -27,21 +27,26 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav pull-right">
-                    <li>
-                        <a href="#">Link 1</a>
-                    </li>
-                    <li>
-                        <a href="#"></a>
-                    </li>
-                    <li>
-                        <a href="#">Link 2</a>
-                    </li>
+                  <% if user_signed_in? %>
+                    <li><%= link_to 'My Profile', "#" %></li>
+                    <li><%= link_to 'Currently logged in, log out?', destroy_user_session_path, method: :delete %></li>
+                  <% else %>
+                    <li><%= link_to 'Log in?', new_user_session_path %></li>
+                    <li><%= link_to 'Sign up', new_user_registration_path %></li>
+                  <% end %>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
         </div>
         <!-- /.container -->
     </nav>
+
+<% if notice.present? %>
+  <p class="alert alert-info"><%= notice %></p>
+<% end %>
+<% if alert.present? %>
+  <p class="alert alert-danger"><%= alert %></p>
+<% end %>
 
 <%= yield %>
 
