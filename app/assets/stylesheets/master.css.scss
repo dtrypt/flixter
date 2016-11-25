@@ -1,2 +1,54 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+.navbar-custom .navbar-brand {
+  color: white;
+  font-family: 'kaushan_scriptregular', sans-serif;
+  font-size: 28px;
+  float: left;
+}
+
+.navbar-custom .navbar-nav>li>a {
+  color: white;
+}
+
+.navbar {
+  background: #f28943;
+  box-shadow: 0px 1px 3px #2a2a2a;
+}
+
+body {
+  padding-top: 50px;
+}
+@media (max-width: 979px) {
+  body {
+    padding-top: 0px;
+  }
+}
+
+h1, h2, h3, h4, h5, h6, .navbar {
+  margin:0;
+}
+
+.hero {
+  background: url('prettyrock.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height:370px;
+  box-shadow: 0px 3px 8px #2a2a2a;
+}
+
+.frosty {
+  background:rgba(249, 191, 14, 0.5);
+  color: white;
+}
+
+.frosty h1, h2 {
+  text-shadow: rgba(0,0,0,0.95) 1px 1px;
+}
+
+.btn {
+  border-radius:0;
+}
