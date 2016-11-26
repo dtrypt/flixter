@@ -1,12 +1,15 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+.margin_top {
+  margin-top: 50px;
+}
+
 .navbar-custom .navbar-brand {
   color: white;
   font-family: 'kaushan_scriptregular', sans-serif;
   font-size: 36px;
   float: left;
-
 }
 
 .navbar-custom .navbar-nav>li>a {
@@ -15,7 +18,7 @@
 }
 
 .navbar-brand:hover{
-      background-color: none;
+    background-color: none;
     color: #4dbc47;
     text-decoration: none;
 }
@@ -74,5 +77,21 @@ h1, h2, h3, h4, h5, h6, .navbar {
   background: #fff;
   border: 1px solid #ccc;
   border-color: #e4e4e4 #bebebd #bebebd #e4e4e4;
+  padding:10px;
+  border-radius: 25px;
 }
 
+.boolean {
+  height: 16px;
+  margin-left: -20px;
+  width: 285px;
+  text-decoration: none;
+}
+
+.booyah-box h2, .booyah-box h1 {
+  margin: 10px;
+}
+
+.clr {
+  clear:both;
+}

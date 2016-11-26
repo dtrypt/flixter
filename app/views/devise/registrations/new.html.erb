@@ -1,5 +1,7 @@
+<div class="booyah-box col-xs-8 col-xs-offset-2 margin_top">
+<br>
 <h2>Sign up</h2>
-
+<br>
 <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= f.error_notification %>
 
@@ -10,8 +12,11 @@
   </div>
 
   <div class="form-actions">
-    <%= f.button :submit, "Sign up" %>
+    <%= f.button :submit, "Sign up", class: 'btn btn-primary' %>
   </div>
+  <br>
 <% end %>
 
 <%= render "devise/shared/links" %>
+<br>
+</div>

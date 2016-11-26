@@ -11,6 +11,7 @@
 </head>
 <body>
 
+<div id="wrap">
     <!-- Navigation -->
     <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
         <div class="container">
@@ -49,6 +50,17 @@
 <% end %>
 
 <%= yield %>
+</div>
+
+<br class="clr" />
+
+<div id="footer">
+  <div class="container">
+  <b>Footer Here </b>
+  <br>
+  <%= link_to 'Link', '#' %>
+  </div>
+</div>
 
 </body>
 </html>
