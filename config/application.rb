@@ -26,5 +26,7 @@ module Flixter
     # Precompile additional assets
     config.assets.precompile += %w( .svg .eot .woff .ttf )
     
+    config.assets.precompile << "audio/*"
+
   end
 end
