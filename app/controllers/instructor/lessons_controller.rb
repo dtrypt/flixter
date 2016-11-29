@@ -22,9 +22,9 @@ end
     end
   end
 
-helper_method :current_section
+helper_method :current_section #allows us to use current_section
   def current_section
-    @current_section ||= Section.find(params[:section_id]) #stores id from DB
+    @current_section ||= Section.find(params[:section_id]) #stores id from DB. find id onlt 1 time now.
   end
 
   def lesson_params
