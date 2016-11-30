@@ -2,6 +2,7 @@ class CreateCourses < ActiveRecord::Migration
   def change
     create_table :courses do |t|
       t.string :title
+      #t.string :image #not sure about this
       t.text :description
       t.decimal :cost
       t.integer :user_id

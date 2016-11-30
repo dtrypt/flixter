@@ -10,13 +10,19 @@
   <br>
   <br>
   <%= link_to 'Administer', instructor_course_path(@course), class: 'btn btn-danger btn-large' %>
+  <br>
   <% end %>
+  <br>
 
   </div>
 
   <div class="col-sm-8 col-xs-12">
     <%= @course.description %>
   </div>
+
+      <br>
+      <%= image_tag @course.image, class: 'img-responsive' %>
+      <br>
 
   <div class="col-xs-12">
   <% @course.sections.each do |section| %>
