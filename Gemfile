@@ -55,3 +55,5 @@ gem 'rmagick'
 gem "figaro"
 
 gem "fog"
+
+gem 'mini_magick', '~> 4.3.1'
