@@ -18,7 +18,7 @@
         <%= section.title %>
         <%= link_to 'New Lesson', new_instructor_section_lesson_path(section), class: 'pull-right btn btn-primary btn-xs' %>
         <ul>
-          <% section.lessons.each do |lesson| %> <!--lessons comes from the model -->
+          <% section.lessons.rank(:row_order).each do |lesson| %> <!--lessons comes from the model -->
           <li>
             <b><%= lesson.title %></b>
             -
