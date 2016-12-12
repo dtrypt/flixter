@@ -7,7 +7,7 @@
     <%= current_lesson.subtitle %>
   </p>
 
-<video id="MY_VIDEO_1" class="video-js vjs-default-skin vjs-big-play-centered vjs-fluid" controls preload="auto" width="640" height="264" poster="/assets/learn.png" data-setup="{}">
+<video id="MY_VIDEO_1" class="video-js vjs-default-skin vjs-big-play-centered vjs-16-9" controls preload="auto" max-width="640" max-height="264" poster="/assets/learn.png" data-setup="{}">
     <source src="<%= current_lesson.video.to_s %>" type='video/mp4'>
     <!--<source srv="MY_VIDEO.webm" type='video/webm'>-->
   <noscript>

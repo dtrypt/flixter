@@ -8,8 +8,8 @@ class Instructor::LessonsController < ApplicationController
   end
 
   def create
-    @lesson = current_section.lessons.create(lesson_params) #.lessons is from model
-    redirect_to instructor_course_path(current_section.course) #.course is from model (going up)
+    @lesson = current_section.lessons.create(lesson_params) 
+    redirect_to instructor_course_path(current_section.course) 
   end
 
   def show
@@ -38,9 +38,9 @@ class Instructor::LessonsController < ApplicationController
     end
   end
 
-  helper_method :current_section #allows us to use current_section
+  helper_method :current_section #allows us to use current_section in view
   def current_section
-    @current_section ||= Section.find(params[:section_id]) #stores id from DB. find id onlt 1 time now.
+    @current_section ||= Section.find(params[:section_id]) #stores id from DB. find id only 1 time now.
   end
 
   def lesson_params
