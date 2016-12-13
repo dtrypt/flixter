@@ -45,20 +45,30 @@
 
     <ul class="sections">
     <% current_course.sections.rank(:row_order).each do |section| %> <!--sections comes from the model -->
-      <li data-update-url="<%= instructor_section_path(section) %>">
-        <%= section.title %>
-        <%= link_to 'New Lesson', new_instructor_section_lesson_path(section), class: 'pull-right btn btn-primary btn-xs' %>
-        <ul class="lessons">
-          <% section.lessons.rank(:row_order).each do |lesson| %> <!--lessons comes from the model -->
-          <li data-update-url="<%= instructor_lesson_path(lesson) %>">
-            <b><%= lesson.title %></b>
-            -
-            <%= lesson.subtitle %>
+      <li data-update-url="<%= instructor_section_path(section) %>" class="section-li">
+        <div class="header">
+          <span class="glyphicon glyphicon-sort"></span>
+          <%= section.title %>
+        </div>
+          <%= link_to 'New Lesson', new_instructor_section_lesson_path(section), class: 'pull-right btn btn-primary btn-xs' %>
+          <br class="clr" />
+          <ul class="lessons">
+            <% section.lessons.rank(:row_order).each do |lesson| %> <!--lessons comes from the model -->
+            <li data-update-url="<%= instructor_lesson_path(lesson) %>">
+              <span class="col-xs-1 glyphicon glyphicon-sort"></span>
+              <div class="col-xs-5 text-center">
+                <p>
+                <b><%= lesson.title %></b>
+                </p>
+                <p>
+                <%= lesson.subtitle %>
+                </p>
+              </div>
+              <br class="clr" />
             </li>
-            <% end %>
-            </ul>
-
-        <br class="clr" /><br>
+              <% end %>
+          </ul>
+          <br class="clr" /><br>
       </li>
       <% end %>
     </ul>
