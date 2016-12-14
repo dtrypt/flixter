@@ -3,9 +3,28 @@
 
 <div class="booyah-box col-xs-10 col-xs-offset-1">
   <h1><%= current_lesson.title %></h1>
-  <p>
+  <p class="pull-left">
     <%= current_lesson.subtitle %>
   </p>
+  <br class="clr">
+
+  <div data-turbolinks="false">
+  <% if current_lesson.previous_lesson.present? %>
+    <%= link_to lesson_path(current_lesson.previous_lesson), class: 'btn btn-default pull-left' do %>
+    <span class="glyphicon glyphicon-backward"></span>
+    &nbsp; Previous Lesson
+    <% end %>
+  <% end %>
+
+    <% if current_lesson.next_lesson.present? %>
+      <%= link_to lesson_path(current_lesson.next_lesson), class: 'btn btn-default pull-right' do %>
+        Next Lesson &nbsp;
+        <span class="glyphicon glyphicon-forward"></span>
+      <% end %>
+    <% end %>
+  </div>
+  <br class="clr">
+  <br>
 
 <video id="MY_VIDEO_1" class="video-js vjs-default-skin vjs-big-play-centered vjs-16-9" controls preload="auto" max-width="640" max-height="264" poster="/assets/learn.png" data-setup="{}">
     <source src="<%= current_lesson.video.to_s %>" type='video/mp4'>
