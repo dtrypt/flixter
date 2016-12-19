@@ -1,8 +1,10 @@
 <br />
 
 <div class="booyah-box col-xs-10 col-xs-offset-1">
-  <h1>What I'm Learning</h1>
+  <h1 class="text-center">What I'm Learning</h1>
+
   <% current_user.enrolled_courses.each do |course| %>
+  <div class="dashbox">
   <h3 class="text-center">
     <%=link_to course.title, course_path(course) %>
   </h3>
@@ -13,28 +15,28 @@
     <%= course.description %>
   </div>
   <div class="col-xs-12 col-sm-4 text-center">
-    <%= link_to "More Info...", course_path(course), class: 'btn btn-primary' %>
+    <%= link_to "Course Page", course_path(course), class: 'btn btn-primary' %>
   </div>
-  <hr class="col-xs-8 col-xs-offset-2">
-  <br class="clr" / >
-  <% end %>
-
-  <h1>What I'm Teaching</h1>
-  <% current_user.courses.each do |course| %>
-    <h3 class="text-center">
-      <%=link_to course.title, course_path(course) %>
-    </h3>
-    <br>
-  <%= image_tag course.image, class: "img-responsive" %>
+  <br class="clr">
+  </div>
   <br>
-  <div class="col-xs-12 col-sm-8">
-    <%= course.description %>
-  </div>
-  <div class="col-xs-12 col-sm-4 text-center">
-    <%= link_to "More Info...", course_path(course), class: 'btn btn-primary' %>
-  </div>
-  <hr class="col-xs-8 col-xs-offset-2">
-  <br class="clr" / >
   <% end %>
+  </div>
+  <br class="clr"><br><br>
+
+<div class="booyah-box col-xs-10 col-xs-offset-1">
+    <h1 class="text-center">What I'm Teaching</h1>
+    <br>
+    <% current_user.courses.each do |course| %>
+    <div class="col-xs-12 text-center dashbox">
+      <h3>
+        <%=link_to course.title, course_path(course) %>
+      </h3>
+      <br>
+      <%= link_to "Edit Course", instructor_course_path(course), class: 'btn btn-primary' %>
+      <br>
+    </div>
+        <br class="clr"/><br>
+    <% end %>
 
 </div>

@@ -36,7 +36,6 @@
                 <ul class="nav navbar-nav pull-right">
                   <% if user_signed_in? %>
                     <li><%= link_to 'My Dashboard', dashboard_path %></li>
-                    <li><%= link_to 'Intructor Course Page', instructor_courses_path %></li>
                     <li><%= link_to 'Currently logged in, log out?', destroy_user_session_path, method: :delete %></li>
                   <% else %>
                     <li><%= link_to 'Log in?', new_user_session_path %></li>
@@ -91,10 +90,10 @@
       <%= link_to 'https://github.com/trustinruss' do %>
         <%= image_tag 'github.png', class: 'social-button' %>
       <% end %>
-      <%= link_to 'https://www.facebook.com/russell.kranz' do %>
+      <%= link_to 'https://www.facebook.com/' do %>
         <%= image_tag 'facebook.png', class: 'social-button' %>
       <% end %>
-      <%= link_to 'https://twitter.com/RussellKranz' do %>
+      <%= link_to 'https://twitter.com/' do %>
         <%= image_tag 'twitter.png', class: 'social-button' %>
       <% end %>
       </div>

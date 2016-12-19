@@ -1,29 +1,49 @@
 <!--Hero section-->
-<div class="hero">
+<div class="hero img-responsive">
   <br>
   <div class="frosty col-xs-10 col-xs-offset-1 text-center">
     <br>
-    <h1>Hi</h1>
+    <h1>Personalized Learning for Digital Age Skills</h1>
     <br>
-    <h2>Randomness</h2>
+    <h2>Short, to the point, customized classes</h2>
     <br>
-    <%= link_to 'Learn More', courses_path, class: 'btn btn-success' %>
-    <br><br>
+    <%= link_to 'Get Started', courses_path, class: 'btn btn-success' %>
+    <br class="clr"/><br><br><br><br><br>
   </div>
 </div>
 
 <!--3 feature sections-->
-<br>
-<div class="col-xs-10 col xs-offset-1 features text-center">
+<br><br>
+<div class="col-xs-12 features text-center">
   <div class= "col-sm-4">
-    <h3>Feature 1</h3>
+    <%= image_tag 'gears.png', class: 'image-icon' %>
+    <h3>Personalized</h3><br>
+    <p>Get customized class recommendations based on your interests.</p>
   </div>
 
   <div class= "col-sm-4">
-    <h3>Feature 2</h3>
+    <%= image_tag 'vid.png', class: 'image-icon' %>
+    <h3>On-Demand</h3><br>
+    <p>Watch bite-sized instructional videos on your own schedule, anytime, anywhere.</p>
   </div>
 
   <div class= "col-sm-4">
-    <h3>Feature 3</h3>
+    <%= image_tag 'teach.png', class: 'image-icon' %>
+    <h3>Learn By Doing</h3><br>
+    <p>Get customized class recommendations based on your interests.</p>
+  </div>
+</div>
+    <br class="clr"/><br><br><br><br><br><br>
+
+<div class="hero2 img-responsive">
+  <br>
+  <div class="frosty col-xs-10 col-xs-offset-1 text-center">
+    <br>
+    <h1>Teach A Course</h1>
+    <br>
+    <h2>Anyone can teach a course. Earn money doing it on Flixter.</h2>
+    <br>
+    <%= link_to 'Teach a Course', new_instructor_course_path, class: 'btn btn-primary' %>
+    <br class="clr"/><br>
   </div>
 </div>

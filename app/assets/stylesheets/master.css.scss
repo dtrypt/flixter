@@ -48,17 +48,30 @@ h1, h2, h3, h4, h5, h6, .navbar {
 }
 
 .hero {
-  background: url('prettyrock.jpg') no-repeat center center fixed;
+  background: url('coff.jpg');
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  height:400px;
+  box-shadow: 0px 3px 8px #2a2a2a;
+}
+
+.hero2 {
+  background: url('ip6.jpg');
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+  background-position: center;
+
   height:370px;
   box-shadow: 0px 3px 8px #2a2a2a;
 }
 
 .frosty {
-  background:rgba(249, 191, 14, 0.5);
+  background:rgba(49, 50, 51, 0.85);
   color: white;
 }
 
@@ -167,4 +180,13 @@ ul .header .glyphicon {
 
 .lessons li p {
   margin: 0;
+}
+
+.index-icon {
+  width: 55px;
+}
+
+.dashbox {
+  border: 1px solid #ccc;
+  padding: 5px;
 }
