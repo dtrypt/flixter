@@ -67,3 +67,7 @@ gem 'stripe'
 gem 'ranked-model'
 
 gem 'jquery-ui-rails'
+
+gem 'rake', '11.3.0'
+
+# gem 'rails-api'

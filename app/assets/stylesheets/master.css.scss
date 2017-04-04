@@ -1,6 +1,9 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+h1, h2 {
+  font-family: 'ubuntu', sans-serif;
+}
 .margin_top {
   margin-top: 50px;
 }

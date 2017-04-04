@@ -4,7 +4,7 @@ class Instructor::SectionsController < ApplicationController
   before_action :require_authorized_for_current_section, only: [:update]
 
   def create
-    @section = current_course.sections.create(section_params) #posts the section
+    @section = current_course.sections.create(section_params)
     redirect_to instructor_course_path(current_course)
   end
 
@@ -35,9 +35,11 @@ class Instructor::SectionsController < ApplicationController
 
   def current_course
     if params[:course_id]
+    #section doesnt exist yet (for creating)
     @current_course ||= Course.find(params[:course_id])
     else
-    current_section.course #updating can't find the course_id?
+    #section already exists (for updating)
+    current_section.course
     end
   end
 

@@ -10,7 +10,7 @@
   <link href="//vjs.zencdn.net/5.11.7/video-js.css" rel="stylesheet">
   <script src="//vjs.zencdn.net/5.11.7/video.js"></script>
   <script src="//vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
-
+  <link href="https://fonts.googleapis.com/css?family=Droid+Sans|Play|Ubuntu" rel="stylesheet">
 </head>
 <body>
 
@@ -35,7 +35,7 @@
               </ul>
                 <ul class="nav navbar-nav pull-right">
                   <% if user_signed_in? %>
-                    <li><%= link_to 'My Dashboard', dashboard_path %></li>
+                    <li><%= link_to 'My Page', dashboard_path %></li>
                     <li><%= link_to 'Currently logged in, log out?', destroy_user_session_path, method: :delete %></li>
                   <% else %>
                     <li><%= link_to 'Log in?', new_user_session_path %></li>
